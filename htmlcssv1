@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
+        <title>BotafogoBlog:Criminalidade Alta e Moradores de Rua</title>
+    </head>
+    <body>
+        <h1>BotafogoBlog</h1>
+    </body>
+</html>
+body{
+
+    background-color: black;
+
+}
+h1{
+
+    font-size: 100px;
+    font-family: "Bitcount Grid Single", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+    text-align: center;
+    color: white;
+
+}
