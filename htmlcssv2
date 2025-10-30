@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        <title>BB:Criminalidade Alta e Moradores de Rua</title>
+    </head>
+    <body>
+    
+        <section id="titulo">
+            <div id="title">
+                <h1>BotafogoBlog</h1>
+            </div>
+            <div id="subtitle">
+                <h3>Criminalidade alta e Moradores de rua</h3>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section id="crime">
+
+            <div class="texto-animado">
+
+                <h2 class="texto-animado">Criminalidade alta em Botafogo</h2>
+                <br>
+                <p class="texto-animado" id="p1">Oiiiiii</p>
+
+            </div>
+
+        </section>
+    </body>
+</html>
+body{
+
+    background-color: black;
+    font-family: "Alfa Slab One", serif;
+    color: white;
+
+}
+#title{
+
+    font-size: 100px;
+    text-align: center;
+    color: white;
+
+}
+
+#subtitle{
+
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    padding-bottom: 50px;
+
+}
+#titulo{
+
+    margin-bottom: 100px;
+
+}
+h2{
+
+    font-size: 60px;
+    text-align: left;
+
+}
+#p1{
+
+    margin-left: 50px;
+    font-size: 40px;
+
+}
+.texto-animado.hidden {
+    /* Opacidade 0 para o texto começar invisível */
+    opacity: 0;
+    /* Mova o texto para baixo, preparando para a animação de "subir" */
+    transform: translateY(20px); 
+    /* Adicione a transição para animar suavemente a mudança */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .texto-animado.show {
+    /* Opacidade 1 para o texto ficar visível */
+    opacity: 1;
+    /* Mova o texto para a posição original */
+    transform: translateY(0);
+  }
