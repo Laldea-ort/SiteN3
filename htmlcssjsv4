@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site N3</title>
+</head>
+<body>
+    <h1>Criminalidade e situação de rua no bairro de botafogo</h1>
+    <br>
+    <h2 class="htwo">Criminalidade: O que é? Porque têm altas taxas no bairro de botafogo? E quais são as possíveis soluções?</h2>
+    <p>A criminalidade pode ser definida como o conjunto de ações que violam as leis e colocam em risco a segurança pública, como furtos, assaltos, tráfico de substâncias ilícitas e agressões. Esse problema afeta diretamente a qualidade de vida dos moradores, pois aumenta a sensação de medo e insegurança, além de gerar prejuízos sociais e econômicos. Em grandes centros urbanos, o índice de criminalidade costuma ser ainda maior devido à intensa circulação de pessoas.</p>
+    <div>
+        <button type="button" id="ant1" class="bt1">Anterior</button>
+        <button type="button" id="prox1" class="bt1">Próximo</button>
+    </div>
+    <h2 class="htwo">Situação de rua em Botafogo: Porque têm tantos moradores de rua? Quais são as consequências? E quais são as possíveis soluções?</h2>
+    <p>A população em situação de rua é formada por indivíduos que, por diversos motivos, vivem sem moradia fixa e dependem de espaços públicos para sobreviver. Em Botafogo, essa realidade tem se tornado cada vez mais visível, especialmente em áreas próximas a comércios, praças e estações de transporte. A presença dessas pessoas gera impactos sociais importantes, tanto para elas quanto para a rotina do bairro.</p>
+    <div>
+        <button type="button" id="ant2" class="bt1">Anterior</button>
+        <button type="button" id="prox2" class="bt1">Próximo</button>
+    </div>
+    <footer>
+        <h2 id="hfooter">Se quiser testar seus conhecimentos, você pode realizar dois minis quizes, acesse esses quizes clicando nos botões abaixo: </h2>
+        <button type="button" onclick=miniquizum()>Mini Quiz Criminalidade</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: rgb(88, 87, 87);
+    color: white;
+
+}
+
+h1{
+    font-size: 65px;
+    text-align: center;
+}
+
+.htwo{
+    font-size: 45px;
+    font-weight: bold;
+    text-align: justify;
+    margin: 0 40px; /* margem lateral opcional para melhorar leitura */
+    margin-bottom: 15px;
+}
+
+p{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: justify;
+        width: 600px;           /* define um tamanho fixo da caixa */
+        margin: 30px auto;      /* centraliza horizontalmente */
+        padding: 20px;          /* espaço interno da caixa */
+        border: 2px solid black;/* borda visível */
+        border-radius: 10px;    /* deixa os cantos arredondados (opcional) */
+        background-color: #f5f5f5;
+        color: black;
+        margin-top: 30px;
+    
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+.bt1{
+    margin-top: 20px;
+    width: 180px;
+    height: 70px;
+    border: solid 3px black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.bt1:hover{
+
+    box-shadow: 6px 6px 10px black;
+
+}
+
+#ant1, #ant2{
+    margin-right: 20px;
+}
+
+
+footer{
+    margin-top: 170px;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    text-align: center;
+}
+var paragraph1 = document.getElementsByTagName('p')[0];
+var btant1 = document.getElementById('ant1');
+var btprox1 = document.getElementById('prox1');
+var countp1 = 0;
+
+var paragraph2 = document.getElementsByTagName('p')[1];
+var btant2 = document.getElementById('ant2');
+var btprox2 = document.getElementById('prox2');
+var countp2 = 0;
+
+btant1.addEventListener('click', anterior1);
+btprox1.addEventListener('click', proximo1);
+btant2.addEventListener('click', anterior2);
+btprox2.addEventListener('click', proximo2);
+
+function atualizarTexto() {
+    switch (countp1) {
+        case 0:
+            paragraph1.innerText = 'A criminalidade pode ser definida como o conjunto de ações que violam as leis e colocam em risco a segurança pública, como furtos, assaltos, tráfico de substâncias ilícitas e agressões. Esse problema afeta diretamente a qualidade de vida dos moradores, pois aumenta a sensação de medo e insegurança, além de gerar prejuízos sociais e econômicos. Em grandes centros urbanos, o índice de criminalidade costuma ser ainda maior devido à intensa circulação de pessoas.';
+            break;
+        case 1:
+            paragraph1.innerText = 'No bairro de Botafogo, localizado na zona sul do Rio de Janeiro, observa-se um índice elevado de criminalidade, apesar de ser uma área desenvolvida e turística. Os casos acontecem principalmente nas categorias de furtos de celulares, assaltos em vias públicas e ocorrências relacionadas ao tráfico de substâncias ilícitas. O grande fluxo de pessoas e a movimentação comercial acabam facilitando a ação de criminosos.';
+            break;
+        case 2:
+            paragraph1.innerText = 'Um dos fatores que contribui para essa situação é a desigualdade social presente no entorno do bairro. Botafogo é cercado por regiões com menor acesso a serviços básicos, oportunidades de emprego e infraestrutura adequada. Esse contraste acaba gerando conflito social e ampliando a atuação de facções criminosas. Além disso, o policiamento muitas vezes não é suficiente para atender todas as áreas de forma eficaz.';
+            break;
+        case 3:
+            paragraph1.innerText = 'Outro fator relevante é a presença do tráfico de substâncias ilícitas, que ainda se mantém em comunidades próximas. A disputa por territórios gera ações violentas e aumenta a insegurança dos moradores. A falta de investimentos contínuos em políticas públicas preventivas também dificulta a redução dos índices criminais na região.';
+            break;
+        case 4:
+            paragraph1.innerText = 'Algumas possíveis soluções para combater a criminalidade em Botafogo incluem o aumento do policiamento ostensivo e a utilização de tecnologias de monitoramento, como câmeras espalhadas pelo bairro. Programas sociais voltados para a educação, cultura e esporte também podem contribuir, oferecendo aos jovens alternativas ao envolvimento com atividades ilegais.';
+            break;
+        case 5:
+            paragraph1.innerText = 'Por fim, a participação da sociedade é fundamental para o enfrentamento desse problema. A prática de denúncias, o apoio às autoridades e o incentivo a projetos comunitários fortalecem os laços sociais e promovem um ambiente mais seguro. Dessa forma, com a cooperação entre governo, moradores e instituições, é possível reduzir a criminalidade e melhorar a qualidade de vida no bairro de Botafogo.';
+            break;
+    }
+}
+function AtualizarTexto2(){
+
+    switch (countp2) {
+        case 0:
+            paragraph2.innerText = 'A população em situação de rua é formada por indivíduos que, por diversos motivos, vivem sem moradia fixa e dependem de espaços públicos para sobreviver. Em Botafogo, essa realidade tem se tornado cada vez mais visível, especialmente em áreas próximas a comércios, praças e estações de transporte. A presença dessas pessoas gera impactos sociais importantes, tanto para elas quanto para a rotina do bairro.';
+            break;
+        case 1:
+            paragraph2.innerText = 'Entre os fatores que contribuem para o aumento de pessoas em situação de rua em Botafogo, destaca-se a falta de oportunidades de trabalho, problemas de saúde mental, dependência química e a desigualdade social. A proximidade com regiões mais valorizadas acaba atraindo indivíduos em busca de doações, alimentação e maior circulação de pessoas. Além disso, a falta de políticas públicas consistentes dificulta a redução desse cenário.';
+            break;
+        case 2:
+            paragraph2.innerText = 'A ausência de apoio médico especializado e de centros de acolhimento adequados também agrava o problema. Sem acesso a programas de reinserção social, muitos acabam presos em um ciclo de vulnerabilidade. Essa condição não apenas prejudica a dignidade humana, como também afeta a segurança, a higiene urbana e a convivência entre moradores e comerciantes.';
+            break;
+        case 3:
+            paragraph2.innerText = 'Para enfrentar essa questão, é necessário que o poder público amplie investimentos em abrigos, atendimento psicológico, programas de capacitação profissional e políticas de inclusão. Projetos sociais realizados com apoio de ONGs, igrejas e voluntários podem contribuir significativamente na recuperação dessas pessoas. Com ações conjuntas e contínuas, é possível reduzir a quantidade de indivíduos que vivem nas ruas e promover uma melhor qualidade de vida em Botafogo.';
+            break;
+    }
+
+}
+
+function anterior1() {
+    if (countp1 > 0) {
+        countp1--;
+        atualizarTexto();
+    }
+}
+
+function proximo1() {
+    if (countp1 < 5) {
+        countp1++;
+        atualizarTexto();
+    }
+}
+function anterior2() {
+    if (countp2 > 0) {
+        countp2--;
+        AtualizarTexto2();
+    }
+}
+
+function proximo2() {
+    if (countp2 < 3) {
+        countp2++;
+        AtualizarTexto2();
+    }
+}
+function miniquizum()
+{
+
+    location.href = 'https://wordwall.net/pt/resource/101261757/criminalidade-alta-em-botafogo'
+
+}
+
+
+// Exibir o texto inicial
+atualizarTexto();
+AtualizarTexto2();
