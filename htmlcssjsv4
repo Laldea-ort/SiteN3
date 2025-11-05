@@ -43,6 +43,7 @@ body{
 h1{
     font-size: 65px;
     text-align: center;
+    text-decoration: underline 3px red;
 }
 
 .htwo{
@@ -82,12 +83,25 @@ div{
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
+    transition: box-shadow 0.3s ease;
 }
 .bt1:hover{
 
     box-shadow: 6px 6px 10px black;
 
 }
+.bt1:active{
+
+    background-color: #222; /* um preto um pouco mais claro, pra parecer iluminado */
+  box-shadow: 
+    0 0 15px -5px #696969,   /* brilho ciano */
+    0 0 30px -5px #696969;  /* brilho mais forte externo */
+  transform: scale(0.97);
+  color: white;
+  border: solid 3px white;
+
+}
+
 
 #ant1, #ant2{
     margin-right: 20px;
